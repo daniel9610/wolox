@@ -12,7 +12,7 @@ const routes: Routes = [
     children: [
      {
        path: 'landing',
-       loadChildren: './modules/landing/landing.module#LandingModule'
+       loadChildren: './landing/landing.module#LandingModule'
      }
     ]
   },

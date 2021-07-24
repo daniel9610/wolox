@@ -1,21 +1,22 @@
 
-<div class="container">
+<form class="container" [formGroup]="myForm" (ngSubmit)="register()">
     <div class="brand-title">Registro</div>
     <div class="inputs">
       <label>Nombre</label>
-      <input type="text"/><br>
+      <input type="text" formControlName="name"><br>
       <label>Apellido</label>
-      <input type="text" placeholder="example@test.com" /><br>
+      <input type="text" placeholder="example@test.com" formControlName="lastname"><br>
       <label>País</label>
-      <input type="text" placeholder="example@test.com" /><br>
+      <input type="text" formControlName="country"><br>
       <label>Email</label>
-      <input type="email" placeholder="example@test.com" /><br>
+      <input type="email" placeholder="example@test.com" formControlName="email"><br>
       <label>Teléfono</label>
-      <input type="number" placeholder="example@test.com" /><br>
+      <input type="number" formControlName="phone"><br>
       <label>Contraseña</label>
-      <input type="password" placeholder="Min 6 charaters long"/><br>
+      <input type="password" placeholder="Min 6 charaters long" formControlName="password"><br>
       <label>Confirmar Contraseña</label>
-      <input type="password" placeholder="Min 6 charaters long" />
-      <button type="submit">LOGIN</button>
+      <input type="password" placeholder="test" formControlName="confirm_password" />
+      <button type="submit" [disabled]="!myForm.valid">LOGIN</button>
+      <!-- <button type="submit" >LOGIN</button> -->
     </div>
-  </div>
+</form>

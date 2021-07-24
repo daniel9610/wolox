@@ -17,10 +17,8 @@ onWindowScroll() {
     const element = document.querySelector('.navbar') as HTMLElement;
     if (window.pageYOffset > element.clientHeight) {
       element.classList.add('navbar-inverse');
-      console.log("inverse");
     } else {
       element.classList.remove('navbar-inverse');
-      console.log("normal");
     }
   }
 }
