@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: "Fira-Sans";
+    src: local("Fira-Sans"), url(./assets/Fonts/Fira_Sans/FiraSans-ExtraLight.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Monserrat-medium";
+    src: local("Monserrat-medium"), url(./assets/Fonts/Montserrat/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Monserrat-semi-bold";
+    src: local("Monserrat-semi-bold"), url(./assets/Fonts/Montserrat/Montserrat-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Monserrat-extra-bold";
+    src: local("Monserrat-extra-bold"), url(./assets/Fonts/Montserrat/Montserrat-ExtraBold.ttf) format("truetype");
+}

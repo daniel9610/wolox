@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+// pendiente
+ 
+ estilos en el home, arreglar todas las fuentes y flexbox para posicionar todo correctamente
+ agregar todo el responsive en las imágenes y resto del sitio (agregar las de otros tamaños)
+ Hacer el login
+ Hacer el listado de pokemones
+Integrar el lazy loading

@@ -1,0 +1,99 @@
+.box-one {
+    display: flex;
+    flex-direction: row;
+    font-family: Fira-Sans;
+    margin:6%;
+    margin-top: 0%;
+    background: url("../../assets/Backgrounds/Bg_Header.png") repeat-x 0px 50px;
+  }
+
+.box-two {
+    display: flex;
+    flex-direction: row;
+    font-family: Fira-Sans;
+  }
+
+.first-box{
+    margin: auto;
+}
+.second-box{
+    margin: auto;
+    text-align: center;
+}
+
+.third-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 4%;
+}
+
+#follow-box{
+    background: url('../../assets/img_woloxer@2x.png');
+    background-size: 100% 100%;
+    text-align: center;
+    padding: 16%;
+    margin: auto;
+}
+
+#follow-button{
+    border: 3px solid #2596be;
+    background-color: transparent ;
+    color: white;
+    border-radius: 50px;
+    padding-left: 11%;
+    padding-right: 11%; 
+    margin: 3%; 
+}
+
+#welcome-text{
+    margin-right: 22%;
+}
+
+#woloxers{
+    font-size: 125%;
+}
+
+.targets{
+    text-align: center;
+}
+
+.active {
+    order: -1;
+    flex: 1 0 100%;
+}
+
+.green-font{
+    color:rgb(151,207,45);
+    font-family: Monserrat-extra-bold;
+}
+
+.blue-font{
+    color: rgb(26,169,229);
+    font-family: Monserrat-extra-bold;
+}
+
+h1{
+    font-size: 400%;
+    font-family: Monserrat-medium;
+    margin: 10px;
+    line-height: 1.2;
+}
+
+h2{
+    font-size: 300%;
+    font-family: Monserrat-medium;
+    margin: 10px;
+}
+
+h3{
+    font-size: 200%;
+    font-family: Monserrat-semi-bold;
+    margin: 20px;
+
+}
+h4{
+    font-size: 100%;
+    font-family: Monserrat-semi-bold;
+    margin: 20px;
+}

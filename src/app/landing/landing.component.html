@@ -1,0 +1,47 @@
+<div class="box-one">
+    <div class="first-box" fxFlex="60">
+        <h1 id="welcome-text">
+            Bienvenido a tu 
+            <b>entrevista técnica</b> en <span class="green-font">Wolox</span>
+        </h1>
+    </div>
+    <div fxFlex="40">
+        <img style=" max-width: 100%; max-height: 100%;" src="../../assets/images/Img Hero/Ic_ilustra_Hero@2x.png">
+    </div>
+</div>
+
+<div class="box-two">
+    <div fxFlex="60">
+        <h1 id="follow-box">
+            <div style="margin-bottom: 7%;">
+                <span id="woloxers" class="green-font">350 + </span><span id="woloxers" class="blue-font">Woloxers</span> <br>
+            </div>
+            <div>
+                <img src="../../assets/twitter.png" style="width: 8%;"><span style="color: white; vertical-align: super; margin: 4%; font-size: xx-large;">@wolox</span><br>
+            </div>
+           
+            <button mat-button id="follow-button"><h3>Siguenos</h3></button>
+        </h1>
+    </div>
+    <div class="second-box" fxFlex="40">
+        <h1>
+            Trabajamos para <span class="blue-font">convertir </span> <span class="green-font">ideas</span> en productos
+        </h1>
+    </div>
+</div>
+
+<div class="third-box" fxLayoutAlign="space-around center">
+    <div class="active">
+        <h2 style="text-align:center; margin: 7%;">
+            Entre los beneficios que ofrecemos se encuentran <span class="blue-font">;)</span>
+        </h2>
+    </div>
+
+    <div class="targets" *ngFor="let item of landingItems ">
+        <img src={{item.icon}}>
+        <h4>
+            {{item.label}}
+        </h4>
+    </div>
+</div>
+<app-footer></app-footer>
