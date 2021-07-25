@@ -1,1 +1,13 @@
-<p>login works!</p>
+<form class="container" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="brand-title">Login</div>
+    <div class="login">
+        <span id="login-text">¿Aún no estás registrado? </span> <a routerLink="/register">Registro</a>
+    </div>
+    <div class="inputs">
+      <label>Correo</label>
+      <input type="text" placeholder="example@test.com" formControlName="email"><br>
+      <label>Contraseña</label>
+      <input type="password" placeholder="Min 6 charaters long" formControlName="password"><br>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </div>
+</form>

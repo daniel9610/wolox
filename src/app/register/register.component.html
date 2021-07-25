@@ -1,6 +1,9 @@
 
-<form class="container" [formGroup]="myForm" (ngSubmit)="register()">
+<form class="container" [formGroup]="registerForm" (ngSubmit)="register()">
     <div class="brand-title">Registro</div>
+    <div class="login">
+        <span id="login-text">¿Ya estás registrado? </span> <a routerLink="/login">Log in</a>
+    </div>
     <div class="inputs">
       <label>Nombre</label>
       <input type="text" formControlName="name"><br>
@@ -16,7 +19,6 @@
       <input type="password" placeholder="Min 6 charaters long" formControlName="password"><br>
       <label>Confirmar Contraseña</label>
       <input type="password" placeholder="test" formControlName="confirm_password" />
-      <button type="submit" [disabled]="!myForm.valid">LOGIN</button>
-      <!-- <button type="submit" >LOGIN</button> -->
+      <button type="submit" [disabled]="!registerForm.valid">Registro</button>
     </div>
 </form>

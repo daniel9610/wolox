@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class RegisterComponent implements OnInit {
 
-  myForm = new FormGroup({
+  registerForm = new FormGroup({
     name: new FormControl(''),
     lastName: new FormControl(''),
     country: new FormControl(''),
@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   // token : any;
   token:any = {};
 
-  nameButton: any;
+  registerButton: any;
   // user:any = this.auth.currentUserObservable.currentUser;
 
   constructor(
@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.myForm = this.formBuilder.group({
+    this.registerForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(1)]],
       lastname: ['', [Validators.required, Validators.minLength(1),Validators.maxLength(10)]],
       country: ['', [Validators.required, Validators.minLength(1)]],
@@ -48,10 +48,10 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    const form = this.myForm.value;
-    console.log(this.myForm.controls);
-    if(this.myForm.valid){
-      this.nameButton = 'Enviando';
+    const form = this.registerForm.value;
+    console.log(this.registerForm.controls);
+    if(this.registerForm.valid){
+      this.registerButton = 'Enviando';
       this.auth.register( 'signup', form.name, form.lastname, form.country, form.email, form.phone, form.password).subscribe(
           result => {
             if(result){
@@ -75,9 +75,9 @@ export class RegisterComponent implements OnInit {
               title: 'Error API.'
             });
           });
-      this.nameButton = 'Enviar';
-    }else if(this.myForm.invalid){
-      console.log(this.myForm);
+      this.registerButton = 'Enviar';
+    }else if(this.registerForm.invalid){
+      console.log(this.registerForm);
       Swal.fire({
         title: 'Formulario inválido',
         text: 'Diligencie todos los campos del formulario',
@@ -85,5 +85,4 @@ export class RegisterComponent implements OnInit {
       });
     }
   }
-
-  }
+}
