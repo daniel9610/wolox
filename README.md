@@ -35,4 +35,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  agregar todo el responsive en las imágenes y resto del sitio (agregar las de otros tamaños)
  Hacer el login
  Hacer el listado de pokemones
-Integrar el lazy loading
+Cambiar la fuente de los botones del nav y los estilos
+Crear guard para la ruta de los pokemones
+agregar las validaciones de todos los campos (expresión regular)
+revisar por qué al paginar se totea con la última página

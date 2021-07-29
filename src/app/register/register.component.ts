@@ -22,11 +22,8 @@ export class RegisterComponent implements OnInit {
     confirm_password: new FormControl(''),
   });
 
-  // token : any;
   token:any = {};
-
   registerButton: any;
-  // user:any = this.auth.currentUserObservable.currentUser;
 
   constructor(
     public router : Router,
@@ -59,7 +56,7 @@ export class RegisterComponent implements OnInit {
             console.log(this.token.token.token);
 
             this.localStorage.set('token', this.token.token.token);
-            this.router.navigateByUrl('/');
+            this.router.navigateByUrl('/pokemon');
 
               // Swal.fire({
               //   title: 'Registro exitoso',

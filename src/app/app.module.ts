@@ -19,6 +19,9 @@ import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { PokemonComponent } from './pokemon/pokemon.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     RegisterComponent,
     LoginComponent,
+    PokemonComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ import { LoginComponent } from './login/login.component';
     MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    SweetAlert2Module.forRoot()
   ],
 
   exports: [

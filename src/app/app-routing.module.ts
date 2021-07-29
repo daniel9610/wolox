@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component'
 import { RegisterComponent } from '../app/register/register.component'
 import { LoginComponent } from '../app/login/login.component'
+import { PokemonComponent } from '../app/pokemon/pokemon.component'
+import { AuthorizeGuard } from './authorize.guard'
 
 const routes: Routes = [
   // { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -40,6 +42,19 @@ const routes: Routes = [
      }
     ]
   },
+
+  {
+    path: 'pokemon',
+    component: PokemonComponent,
+    canActivate : [ AuthorizeGuard ],
+    children: [
+     {
+       path: 'pokemon',
+       loadChildren: './modules/pokemon/pokemon.module#PokemonModule'
+     }
+    ]
+  },
+
 
   {  path: '**', redirectTo: 'landing' },
 ];

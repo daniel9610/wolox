@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
             console.log(this.token.token.token);
 
             this.localStorage.set('token', this.token.token.token);
-            this.router.navigateByUrl('/');
+            this.router.navigateByUrl('/pokemon');
 
               // Swal.fire({
               //   title: 'Registro exitoso',
