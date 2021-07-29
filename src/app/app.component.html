@@ -1,65 +1,14 @@
-<!-- <mat-toolbar>
-    <mat-toolbar-row>
-      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>
-        <img class="icon" src="assets/logo_full_color.svg" alt="Wolox">
-      </span>
-      <span class="menu-spacer"></span>
-      <div fxShow="true" fxHide.lt-md fxFlex fxLayoutAlign="end start">
-      
-        <a href="#" mat-button>Inicio</a>
-        <a href="#" mat-button>Beneficios</a>
-        <button href="#" mat-button class="button-login">Login</button>
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar> -->
-<!-- --------------------------------- -->
-  <!-- <div class="toolbar">
-    <div> -->
-      <!-- <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm> -->
-        <!-- <mat-icon>menu</mat-icon>
-      </button> -->
-      <!-- <span>
-        <img class="icon" src="assets/logo_full_color.svg" alt="Wolox">
-      </span>
-      <span class="menu-spacer"></span>
-      <div fxShow="true" fxHide.lt-md fxFlex fxLayoutAlign="end start">
-      
-        <a href="#" mat-button>Inicio</a>
-        <a href="#" mat-button>Beneficios</a>
-        <button href="#" mat-button class="button-login">Login</button>
-      </div>
-    </div>
-  </div> -->
-  <!-- ------------------------ -->
-  
+
   <nav class="navbar" (window:scroll)="onWindowScroll();"> 
     <ul class="menu">
        <li class="logo"><a href="#"><img class="icon" src="assets/logo_full_color.svg" alt="Wolox"></a></li> 
-       <!-- <li class="item"><a href="#">Home</a></li> 
-       <li class="item"><a href="#">About</a></li>
-      <li class="item"><a href="#">Services</a></li> 
-      <li class="item"><a href="#">Features</a></li> 
-      <li class="item"><a href="#">Blog</a></li> 
-      <li class="item"><a href="#">Contact</a></li>  -->
-      <li class="item button"><a href="#">Log In</a></li> 
-      <li class="item button secondary"><a href="#">Sign Up</a></li> 
-      <li class="item button button-login"><a routerLink="/register">Login</a></li> 
+      <li class="item button secondary"><a href="#">Inicio</a></li> 
+      <li class="item button secondary"><a href="#">Beneficios</a></li> 
+      <li class="item button button-login" (click)="goToLogin()" >Login</li> 
       <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li> 
     </ul> 
   </nav>
-  <!-- <div fxFlexFill>
-    <div>
-      <div>
-        <a href="#" mat-list-item>Inicio</a>
-        <a href="#" mat-list-item>Beneficios</a>
-        <a href="#" mat-list-item>Login</a>
-      </div>
-    </div> -->
 
-  <!-- </div> -->
   <div class="main">
     <router-outlet></router-outlet>
     

@@ -37,10 +37,10 @@
 //     background-color: #04AA6D;
 //   }
 
-/* Desktop menu */ @media all and (min-width: 900px) { .item { display: block; width: auto; } .toggle { display: none; } .logo { order: 0; } .item { order: 1; } .button { order: 2; } .menu li { padding: 15px 10px; } .menu li.button-login{ border: 1px solid #2596be; color: #2596be; border-radius: 25px; padding-left: 6%; padding-right: 6%;} }
-/* Tablet menu */ @media all and (min-width: 600px) { .menu { justify-content: center; } .logo { flex: 1; } .toggle { flex: 1; text-align: right; } .item.button { width: auto; order: 1; display: block; } .toggle { order: 2; }  .button a { padding: 7.5px 15px; } .button.secondary a { background: transparent; } .button a:hover { text-decoration: none; } .button:not(.secondary) a:hover { background: #2596be; } .button.secondary a:hover { color: #ddd; } }
-/* Mobile menu */ .menu { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; } .toggle { order: 1; } .item.button { order: 2; } .item { width: 100%; text-align: center; order: 3; display: none; } .item.active { display: block; }
-/* Basic styling */ * { box-sizing: border-box; padding: 0; margin: 0; } body { font-family: sans-serif; } nav { background:transparent; padding: 3%; position: fixed; z-index: 1000; width: 100%;} ul { list-style-type: none; } a { color: black; text-decoration: none; } a:hover { text-decoration: underline; } .logo a:hover { text-decoration: none; } .menu li { font-size: 16px; padding: 1% 3%; white-space: nowrap; } .logo a, .toggle a { font-size: 20px; } .button.secondary { border-bottom: 1px #444 solid; } .icon{width: 300px;} 
+/* Desktop menu */ @media all and (min-width: 900px) { .item { display: block; width: auto; } .toggle { display: none; } .logo { order: 0; } .item { order: 1; } .button { order: 2; } .menu li { padding: 15px 10px; } .menu li.button-login{ border: 2px solid #2596be; color: #2596be; border-radius: 35px; padding-left: 6%; padding-right: 6%; cursor: pointer;} .menu li.button-login a {color: #2596be; } .menu li.button-login:hover{ background-color:rgba(129, 193, 196, 0.3);}}
+/* Tablet menu */ @media all and (min-width: 600px) { .menu { justify-content: center; } .logo { flex: 1; } .toggle { flex: 1; text-align: right; } .item.button { width: auto; order: 1; display: block; } .toggle { order: 2; } .button.secondary a { background: transparent; font-size: x-large; } .button a:hover { text-decoration: none; } .button:not(.secondary)  .button.secondary a:hover { color: #ddd; } }
+/* Mobile menu */ .menu { font-family: 'Monserrat-semi-bold'; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; } .toggle { order: 1; } .item.button { order: 2; } .item { width: 100%; text-align: center; order: 3; display: none; } .item.active { display: block; }
+/* Basic styling */ * { box-sizing: border-box; padding: 0; margin: 0; } body { font-family: sans-serif; } nav { background:transparent; padding: 3%; position: fixed; z-index: 1000; width: 100%;} ul { list-style-type: none; } a { color: black; text-decoration: none; } a:hover { text-decoration: underline; } .logo a:hover { text-decoration: none; } .menu li { font-size: 16px; padding: 1% 3%; white-space: nowrap; } .logo a, .toggle a { font-size: 20px; } .button.secondary { } .icon{width: 300px;} 
 .main {
   padding-top: 10%;
   height: 1500px; /* Used in this example to enable scrolling */
@@ -49,7 +49,7 @@
     font-size: large;
     padding-left: 3%;
     padding-right: 3%;
-}
+  }
 // .button-login {
 //     border: 1px solid #2596be;
 //     color: #2596be;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,9 @@ import { HostListener } from '@angular/core';
 
 export class AppComponent {
   // title = 'WoloxTest';
+  constructor(
+    public router : Router,
+  ) { }
 
   @HostListener('window:scroll', ['$event'])
 
@@ -20,5 +24,9 @@ onWindowScroll() {
     } else {
       element.classList.remove('navbar-inverse');
     }
+  }
+
+  goToLogin(){
+    this.router.navigateByUrl('/login');
   }
 }
