@@ -1,0 +1,141 @@
+<div *ngIf="displayModal  === false">
+<header class="masthead clear">
+    <div id="target" class="centered">
+        
+        <div class="site-branding">
+            <div id="logo-pokemon">
+                <img class="poke-logo" src="../../assets/pokeapi.png" alt="pokeapi">
+                
+
+                
+                <form [formGroup]="searchForm" (ngSubmit)="searchPokemon()">
+                    <input type="text" placeholder="Nombre o Id" formControlName="pokemonNameOrId">
+                    <button id="search-button" type="submit">Buscar</button>
+                </form>
+            </div>
+
+        </div><!-- .site-title -->
+    </div><!-- .centered -->
+</header><!-- .masthead -->
+
+<main class="main-area">
+    
+    <div class="centered">
+
+        <section class="cards">
+            
+            <div *ngFor="let pokemon of pokemones" [ngClass]="{'card':true,'pokemon-selected':pokemon.isSelected}">
+                <!-- <div [ngClass]="{'selectedCSSClass':pokemon.url == active}"> -->
+                    <a (click)="pokemonComparison(pokemon.url);">
+                        <picture class="thumbnail">
+                            <img src="{{pokemon.picture}}">
+                        </picture>
+                        <div class="card-content">
+    
+                            <h2>{{pokemon.name}}</h2>
+                          
+                        </div><!-- .card-content -->
+                    </a>
+                <!-- </div> -->
+               
+               
+            </div><!-- .card -->
+
+        </section><!-- .cards -->
+
+        
+
+        <div class="d-flex justify-content-center pagination-custom">
+            <pagination-controls  previousLabel="Prev" nextLabel="Next" (pageChange)="tabSize($event)">
+            </pagination-controls>
+          </div>
+    </div><!-- .centered -->
+    <div class="pagination">
+        <select class="offset" (change)="tableData($event)">
+          <!-- <option value="" disabled selected>Cantidad a listar</option> -->
+          <option *ngFor="let size of tableSizesArr" [ngValue]="size.number" [selected]="size.isSelected">
+            {{ size.number }}
+          </option>
+        </select>
+    </div>
+</main>
+
+<button id="to-top" (click)="open()" [ngClass]="{'button-versus-show':isButtonVisible, 'button-versus-hidden':!isButtonVisible}">Comparar ({{comparison.length}})</button>
+</div>
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+   
+<tr *ngFor="let articles of pokemones | paginate : {
+        itemsPerPage: tableSize,
+        currentPage: page,
+        totalItems: count
+    };
+    let i = index">
+</tr>
+  
+
+
+  <div class ="modal" *ngIf="displayModal  === true">
+    <section >
+      <div >
+  
+        <header class="masthead clear">
+            <div class="centered">
+                
+                <div class="site-branding">
+                    <h1 class="site-title">Compara tus pokémon</h1>
+                  <p>Detalles a fondo de cada pokémon</p>
+                </div><!-- .site-title -->
+            </div><!-- .centered -->
+        </header><!-- .masthead -->
+        
+        <main class="main-area">
+            
+            <div class="centered">
+    
+                <section class="cards">
+                    
+                    <article *ngFor="let pokemon of comparisonResult" class="modal-card">
+                        <!-- <a href="#"> -->
+                            <picture class="thumbnail">
+                                <img src="{{pokemon.sprites.front_default}}" alt="{{pokemon.name}}">
+                            </picture>
+                            <div class="card-content">
+    
+                                <h1>{{pokemon.name}}</h1>
+                                <b>Altura :</b> {{pokemon.height}}<br>
+                                <b>peso :</b> {{pokemon.weight}}<br>
+                                <b>Tipos :</b> <div *ngFor="let type of pokemon.types">
+                                    {{type.type.name}}
+                                </div>
+                                <b>movimientos:</b><br>
+
+                                <select>
+                                    <option *ngFor="let move of pokemon.moves">{{move.move.name}}</option>
+                                
+                                </select>
+
+                                <!-- <p *ngFor="let move of pokemon.moves">
+                                    {{move.move.name}}
+                                </p> -->
+
+                            </div><!-- .card-content -->
+                        <!-- </a> -->
+                    </article><!-- .card -->
+    
+                
+    
+                </section><!-- .cards -->
+               
+            </div><!-- .centered -->
+            
+        </main>
+        <div id="modal-footer">
+        <a class="button-close"
+        type="button" 
+        (click)="close()">Close</a>
+    </div>
+    </div>
+  
+    </section>
+  </div>
+

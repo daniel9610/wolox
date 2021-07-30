@@ -77,12 +77,24 @@ button {
   border-radius: 20px;
   cursor: pointer;
   font-weight: 900;
-  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  // box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
   transition: 0.5s;
+  color:white
 }
 
-button:hover {
-  box-shadow: none;
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor:default;
+}
+
+button:enabled:hover {
+  background: white;
+  color : #1DA1F2;
+  border-radius: 20px;
+  border: 1px solid #2596be;
 }
 
 .login{
